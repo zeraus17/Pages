@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Definir la codificación de caracteres para manejar correctamente los caracteres especiales (acentos, eñes, etc.) -->
+    <meta charset="UTF-8">
+
+    <!-- Meta etiqueta para la validación de Google Search Console -->
+    <meta name="google-site-verification" content="tu-codigo-de-verificacion" />
+    
+    <!-- Meta tag para viewport, importante para la responsividad en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta description, útil para SEO, aunque en este caso no será vista debido a la redirección automática -->
+    <meta name="description" content="Redirección automática a nuestro sitio web. Si no es redirigido automáticamente, haga clic en el enlace.">
+
+    <!-- Meta para evitar que la página sea indexada por motores de búsqueda, como Google -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Título que se mostrará temporalmente antes de la redirección -->
+    <title>Redirigiendo...</title>
+
+    <!-- Script para manejar redirecciones y validación de URL -->
+    <script type="text/javascript">
+        // Verificación si JavaScript está habilitado para realizar la redirección correctamente
+        if (typeof window.location.href !== "undefined") {
+            // URL de destino para la redirección
+            const redirectUrl = "https://www.distribuidora-ram.com/?fbclid=IwY2xjawGiEjtleHRuA2FlbQIxMAABHdtaShEFZrikdDBSTiY0Mbc16V3HqiwxrsxX5OSzmch9pgrLc8IpKGC8pw_aem_Ozs2fpcXCetwOK897tJ1_Q";
+            
+            // Comprobamos si la URL es válida utilizando el objeto URL de JavaScript
+            try {
+                // Si la URL no es válida, lanzará un error
+                new URL(redirectUrl);
+                
+                // Redirigimos a la URL deseada
+                window.location.href = redirectUrl;
+            } catch (e) {
+                // En caso de error en la URL, mostramos un mensaje en consola y alertamos al usuario
+                console.error("Error en la URL de redirección:", e);
+                alert("Hubo un problema con la redirección. Intenta hacer clic en el siguiente enlace.");
+            }
+        }
+    </script>
+
+    <!-- Enlace para redirección manual en caso de que la redirección automática no funcione -->
+    <noscript>
+        <!-- El contenido dentro de <noscript> se muestra solo si JavaScript está deshabilitado -->
+        <p>Si no eres redirigido automáticamente, por favor, <a href="https://www.distribuidora-ram.com/?fbclid=IwY2xjawGiEjtleHRuA2FlbQIxMAABHdtaShEFZrikdDBSTiY0Mbc16V3HqiwxrsxX5OSzmch9pgrLc8IpKGC8pw_aem_Ozs2fpcXCetwOK897tJ1_Q">haz clic aquí para continuar</a>.</p>
+    </noscript>
+
+    <!-- Estilos CSS básicos para mejorar la experiencia visual mientras la página se redirige -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0078d4;
+        }
+
+        .loading-message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Título que se verá mientras la redirección ocurre -->
+        <h1>Redirigiendo...</h1>
+
+        <!-- Mensaje que informa sobre la redirección y el enlace manual en caso de falla -->
+        <div class="loading-message">
+            Si no eres redirigido automáticamente, por favor <a href="https://www.distribuidora-ram.com/?fbclid=IwY2xjawGiEjtleHRuA2FlbQIxMAABHdtaShEFZrikdDBSTiY0Mbc16V3HqiwxrsxX5OSzmch9pgrLc8IpKGC8pw_aem_Ozs2fpcXCetwOK897tJ1_Q" target="_blank">haz clic aquí</a> para continuar.
+        </div>
+    </div>
+
+</body>
+</html>

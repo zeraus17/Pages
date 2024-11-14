@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tag de codificación de caracteres UTF-8, necesario para soportar caracteres especiales y acentuados -->
+    <meta charset="UTF-8">
+    
+    <!-- Meta tag para la vista responsiva en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta tag para asegurar que la página es indexada correctamente por motores de búsqueda -->
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Definición del título de la página (aunque no se verá en el caso de redirección inmediata) -->
+    <title>Redirección a Facebook</title>
+
+    <!-- Meta información para optimización SEO de la página -->
+    <meta name="description" content="Redirección automática a un perfil de Facebook, garantizando una experiencia rápida y segura.">
+    <meta name="author" content="Tu Nombre o Empresa">
+    
+    <!-- Definición de un favicon (ícono de la página) para mejorar la experiencia del usuario -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Script de redirección con control de errores -->
+    <script type="text/javascript">
+        // Función para redirigir al usuario de forma segura, asegurando que la URL está bien formada
+        function redirectToFacebook() {
+            const url = "https://www.facebook.com/profile.php?id=100054416862915&locale=es_LA";
+            
+            // Verificación básica de la URL para asegurarse de que es válida
+            try {
+                // Comprobamos si la URL tiene el formato adecuado
+                new URL(url);  // Esto lanzará un error si la URL no es válida
+                window.location.href = url;
+            } catch (error) {
+                console.error('URL inválida o no accesible: ', error);
+                alert("Ocurrió un error. No se puede redirigir a la página solicitada.");
+            }
+        }
+
+        // Llamamos a la función después de un pequeño retraso para dar tiempo a que el usuario vea algo
+        setTimeout(redirectToFacebook, 2000); // 2 segundos de espera antes de la redirección
+    </script>
+
+    <!-- Estilos CSS para hacer la página visualmente limpia y profesional -->
+    <style>
+        /* Estilos básicos para asegurar una página sin distracciones, optimizada para la redirección */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9; /* Color de fondo suave */
+            font-family: 'Arial', sans-serif; /* Fuente estándar legible */
+            color: #333; /* Color de texto oscuro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centrado vertical */
+        }
+
+        /* Contenedor principal que aloja el mensaje (en caso de que la redirección falle) */
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Título grande */
+        h1 {
+            font-size: 24px;
+            color: #0078d4; /* Color azul para el título */
+        }
+
+        /* Mensaje de redirección */
+        .message {
+            font-size: 18px;
+            color: #555;
+            margin-top: 15px;
+        }
+
+        /* Enlace de redirección manual */
+        .redirect-link {
+            margin-top: 20px;
+            display: block;
+            font-size: 16px;
+            color: #0078d4;
+            text-decoration: none;
+        }
+
+        .redirect-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mensaje de carga o espera */
+        .loading-message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <!-- Mensaje de redirección visible mientras se procesa -->
+        <h1>Redirigiendo a Facebook...</h1>
+        
+        <div class="message">
+            Si no eres redirigido automáticamente, por favor haz clic en el siguiente enlace:
+        </div>
+        
+        <!-- Enlace de redirección manual en caso de que la redirección automática falle -->
+        <a class="redirect-link" href="https://www.facebook.com/profile.php?id=100054416862915&locale=es_LA" target="_blank">
+            Ir al perfil de Facebook
+        </a>
+
+        <!-- Mensaje informativo sobre la redirección -->
+        <div class="loading-message">
+            Esto puede tardar unos segundos. Si no ocurre nada, haz clic en el enlace.
+        </div>
+    </div>
+
+</body>
+</html>

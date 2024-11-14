@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow"> <!-- Evita el indexado de esta página -->
+    <title>Redirección Automática</title>
+
+    <!-- Estilos embebidos (CSS) -->
+    <style>
+        /* Estilos generales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #0073e6;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilo para la imagen */
+        .instagram-image {
+            width: 200px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+    </style>
+
+    <!-- Script embebido (JavaScript) -->
+    <script>
+        /**
+         * Función para manejar la redirección automática
+         * Redirige inmediatamente al enlace de Instagram
+         */
+        window.onload = function() {
+            window.location.href = "https://www.instagram.com/ventas_productos_frenos_/"; // Redirección instantánea
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>¡Estás siendo redirigido!</h1>
+        <p>Si la redirección no ocurre automáticamente, puedes hacer clic en el siguiente enlace:</p>
+
+        <!-- Imagen de Instagram desde una URL -->
+        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Logo de Instagram" class="instagram-image">
+
+        <p><a href="https://www.instagram.com/ventas_productos_frenos_/">Ir a Instagram ahora</a></p>
+
+        <!-- Mensaje de fallback en caso de que JS no funcione -->
+        <noscript>
+            <p>Tu navegador no soporta JavaScript o lo tienes deshabilitado. <a href="https://www.instagram.com/ventas_productos_frenos_/">Haz clic aquí</a> para ir al enlace manualmente.</p>
+        </noscript>
+    </div>
+</body>
+
+</html>
